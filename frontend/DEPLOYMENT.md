@@ -13,14 +13,13 @@
 
 ### Option 1: AWS Amplify Console (Recommended - No CLI needed)
 
-**Step 1:** Push code to Git
+**Step 1:** Push code to Git (Already done! ✅)
 ```bash
-cd /Users/sohini.majumdar/workspaces/ZenFlow/frontend
-git init
+# Git repo is already initialized at /Users/sohini.majumdar/workspaces/ZenFlow
+cd /Users/sohini.majumdar/workspaces/ZenFlow
 git add .
-git commit -m "Initial commit"
-git remote add origin YOUR_REPO_URL
-git push -u origin main
+git commit -m "Add deployment configuration"
+git push
 ```
 
 **Step 2:** Deploy via Console
@@ -28,12 +27,17 @@ git push -u origin main
 2. Click **"New app"** → **"Host web app"**
 3. Select your Git provider (GitHub/GitLab/Bitbucket)
 4. Authorize AWS Amplify to access your repository
-5. Select the `ZenFlow/frontend` repository
+5. Select the `ZenFlow` repository (parent folder)
 6. Select branch: `main`
-7. Amplify auto-detects Next.js - click **"Next"**
+7. **IMPORTANT**: Set the build settings:
+   - Base directory: `frontend`
+   - Build command: `npm run build`
+   - The `amplify.yml` file at root will handle this automatically
 8. Review settings - click **"Save and deploy"**
 9. Wait 3-5 minutes ☕
 10. Done! You'll get a URL: `https://main.xxxxx.amplifyapp.com`
+
+**Note:** Since your git repo is at the parent `ZenFlow` folder (not in `frontend`), Amplify will use the `amplify.yml` configuration file at the root which correctly navigates to the `frontend` subfolder.
 
 ### Option 2: AWS Amplify CLI
 
@@ -48,9 +52,9 @@ amplify configure
 
 **Deploy:**
 ```bash
-cd /Users/sohini.majumdar/workspaces/ZenFlow/frontend
+cd /Users/sohini.majumdar/workspaces/ZenFlow
 
-# Initialize Amplify
+# Initialize Amplify (select frontend as your app directory)
 amplify init
 
 # Add hosting
