@@ -6,6 +6,18 @@ interface ProductDetailPageProps {
   };
 }
 
+// Generate static paths for all products at build time
+export function generateStaticParams() {
+  return [
+    { id: '1' },
+    { id: '2' },
+    { id: '3' },
+    { id: '4' },
+    { id: '5' },
+    { id: '6' },
+  ];
+}
+
 // Mock product data - will be replaced with API call
 const products: Record<string, any> = {
   '1': {
