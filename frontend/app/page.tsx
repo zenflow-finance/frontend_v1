@@ -5,27 +5,27 @@ export default function Home() {
   return (
     <div>
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-blue-50 via-white to-blue-50 py-20 md:py-28">
+      <section className="bg-gradient-to-br from-accent-blue-50 via-accent-purple-50 to-accent-pink-50 py-20 md:py-28">
         <div className="container mx-auto px-6">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             {/* Hero Content */}
             <div>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
-                Your Gateway to <span className="text-blue-600">Smart Living</span>
+                Your Gateway to <span className="text-orange-600">Smart Investments</span>
               </h1>
               <p className="text-lg md:text-xl text-gray-600 mb-8 leading-relaxed">
-                All Your Wellness Needs in One Place: Meditation, Fitness, Nutrition, Mental Health, and Sustainable Living Solutions.
+                All Your Investment Needs in One Place: Stocks, IPOs, Mutual Funds, Derivatives, Commodities, Futures, Options, and Bonds.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link
                   href="/products"
-                  className="inline-block bg-blue-600 text-white text-center font-semibold px-8 py-4 rounded-md hover:bg-blue-700 transition-colors duration-300"
+                  className="inline-block bg-orange-600 text-white text-center font-semibold px-8 py-4 rounded-md hover:bg-orange-700 transition-colors duration-300"
                 >
                   Get Started
                 </Link>
                 <Link
                   href="#learn"
-                  className="inline-block bg-white border-2 border-gray-300 text-gray-700 text-center font-semibold px-8 py-4 rounded-md hover:border-blue-600 hover:text-blue-600 transition-colors duration-300"
+                  className="inline-block bg-white border-2 border-gray-300 text-gray-700 text-center font-semibold px-8 py-4 rounded-md hover:border-orange-600 hover:text-orange-600 transition-colors duration-300"
                 >
                   Learn More
                 </Link>
@@ -35,10 +35,15 @@ export default function Home() {
               </p>
             </div>
 
-            {/* Hero Image Placeholder */}
+            {/* Hero Image */}
             <div className="hidden md:block">
-              <div className="bg-gradient-to-br from-blue-100 to-purple-100 rounded-2xl h-96 flex items-center justify-center shadow-xl">
-                <span className="text-gray-400 text-xl">Hero Image</span>
+              <div className="relative rounded-2xl overflow-hidden shadow-2xl">
+                <img
+                  src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=800&h=600&fit=crop&q=80"
+                  alt="Professional investor analyzing financial data"
+                  className="w-full h-96 object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-tr from-blue-600/20 to-transparent"></div>
               </div>
             </div>
           </div>
@@ -46,21 +51,21 @@ export default function Home() {
       </section>
 
       {/* Icon-Based Features */}
-      <section className="py-16 bg-white border-t border-gray-100">
+      <section className="py-16 bg-gradient-to-r from-accent-green-50 to-accent-teal-50 border-t border-gray-100">
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-2 md:grid-cols-5 gap-8">
             {[
-              { icon: '🧘', label: 'Meditation' },
-              { icon: '💪', label: 'Fitness' },
-              { icon: '🥗', label: 'Nutrition' },
-              { icon: '🧠', label: 'Mental Health' },
-              { icon: '🌱', label: 'Sustainability' },
+              { icon: '📈', label: 'Stocks', color: 'bg-accent-blue-100' },
+              { icon: '🎯', label: 'IPOs', color: 'bg-accent-purple-100' },
+              { icon: '💼', label: 'Mutual Funds', color: 'bg-accent-pink-100' },
+              { icon: '📊', label: 'Derivatives', color: 'bg-accent-orange-100' },
+              { icon: '🪙', label: 'Commodities', color: 'bg-accent-teal-100' },
             ].map((item, index) => (
               <div key={index} className="text-center group cursor-pointer">
-                <div className="bg-blue-50 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-3 group-hover:bg-blue-100 transition-colors">
+                <div className={`${item.color} w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform`}>
                   <span className="text-4xl">{item.icon}</span>
                 </div>
-                <p className="text-sm font-medium text-gray-700 group-hover:text-blue-600 transition-colors">
+                <p className="text-sm font-medium text-gray-700 group-hover:text-orange-600 transition-colors">
                   {item.label}
                 </p>
               </div>
@@ -73,26 +78,26 @@ export default function Home() {
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-6">
           <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-4">
-            Innovative Solutions For Your Wellness Journey
+            Innovative Solutions For Your Financial Journey
           </h2>
           <p className="text-center text-gray-600 mb-16 max-w-3xl mx-auto text-lg">
-            Discover our carefully curated selection of products designed to enhance every aspect of your well-being
+            Discover our comprehensive suite of financial products designed to help you achieve your investment goals
           </p>
 
           {/* Product Highlights */}
           <div className="grid md:grid-cols-2 gap-12 mb-12">
             {/* Feature 1 */}
-            <div className="bg-white rounded-lg shadow-md p-8 hover:shadow-xl transition-shadow">
+            <div className="bg-gradient-to-br from-accent-blue-50 to-white rounded-lg shadow-md p-8 hover:shadow-xl transition-all border border-accent-blue-100">
               <div className="flex items-start gap-4">
-                <div className="bg-blue-100 p-4 rounded-lg">
-                  <span className="text-3xl">🎯</span>
+                <div className="bg-gradient-to-br from-accent-blue-100 to-accent-purple-100 p-4 rounded-lg">
+                  <span className="text-3xl">🤖</span>
                 </div>
                 <div>
-                  <h3 className="text-2xl font-bold text-gray-900 mb-3">Smart Wellness</h3>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-3">Algo Trading</h3>
                   <p className="text-gray-600 mb-4 leading-relaxed">
-                    AI-powered recommendations tailored to your unique wellness goals and lifestyle preferences.
+                    Advanced algorithmic trading solutions powered by cutting-edge technology for optimal execution and returns.
                   </p>
-                  <a href="#" className="text-blue-600 font-semibold hover:text-blue-700 inline-flex items-center">
+                  <a href="#" className="text-orange-600 font-semibold hover:text-orange-700 inline-flex items-center">
                     Know More →
                   </a>
                 </div>
@@ -100,17 +105,17 @@ export default function Home() {
             </div>
 
             {/* Feature 2 */}
-            <div className="bg-white rounded-lg shadow-md p-8 hover:shadow-xl transition-shadow">
+            <div className="bg-gradient-to-br from-accent-purple-50 to-white rounded-lg shadow-md p-8 hover:shadow-xl transition-all border border-accent-purple-100">
               <div className="flex items-start gap-4">
-                <div className="bg-purple-100 p-4 rounded-lg">
-                  <span className="text-3xl">📱</span>
+                <div className="bg-gradient-to-br from-accent-purple-100 to-accent-pink-100 p-4 rounded-lg">
+                  <span className="text-3xl">🌍</span>
                 </div>
                 <div>
-                  <h3 className="text-2xl font-bold text-gray-900 mb-3">Mobile Experience</h3>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-3">Foreign Portfolio Investment</h3>
                   <p className="text-gray-600 mb-4 leading-relaxed">
-                    Access your wellness journey anywhere with our intuitive mobile app available on iOS and Android.
+                    Access global markets and diversify your portfolio with international investment opportunities.
                   </p>
-                  <a href="#" className="text-blue-600 font-semibold hover:text-blue-700 inline-flex items-center">
+                  <a href="#" className="text-orange-600 font-semibold hover:text-orange-700 inline-flex items-center">
                     Know More →
                   </a>
                 </div>
@@ -121,42 +126,48 @@ export default function Home() {
       </section>
 
       {/* Learn Section */}
-      <section id="learn" className="py-20 bg-white">
+      <section id="learn" className="py-20 bg-gradient-to-br from-accent-orange-50 to-accent-pink-50">
         <div className="container mx-auto px-6 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
             Learn with ZenFlow
           </h2>
           <p className="text-gray-600 mb-12 max-w-2xl mx-auto text-lg">
-            Access our extensive knowledge center with guides, tutorials, and expert advice
+            Access our extensive knowledge center with investment guides, market analysis, and expert financial advice
           </p>
           <div className="grid md:grid-cols-3 gap-8">
-            <div className="bg-gray-50 rounded-lg p-8 hover:shadow-lg transition-shadow">
-              <div className="text-4xl mb-4">📚</div>
-              <h3 className="text-xl font-semibold mb-3">Wellness Guides</h3>
+            <div className="bg-white rounded-lg p-8 hover:shadow-xl transition-all border-2 border-accent-blue-100 hover:border-accent-blue-200">
+              <div className="bg-accent-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-4xl">📚</span>
+              </div>
+              <h3 className="text-xl font-semibold mb-3">Investment Guides</h3>
               <p className="text-gray-600 mb-4">
-                Comprehensive guides to help you on your wellness journey
+                Comprehensive guides covering stocks, mutual funds, and more to help you make informed decisions
               </p>
-              <a href="#" className="text-blue-600 font-medium hover:text-blue-700">
+              <a href="#" className="text-orange-600 font-medium hover:text-orange-700">
                 Explore →
               </a>
             </div>
-            <div className="bg-gray-50 rounded-lg p-8 hover:shadow-lg transition-shadow">
-              <div className="text-4xl mb-4">🎓</div>
-              <h3 className="text-xl font-semibold mb-3">Video Tutorials</h3>
+            <div className="bg-white rounded-lg p-8 hover:shadow-xl transition-all border-2 border-accent-purple-100 hover:border-accent-purple-200">
+              <div className="bg-accent-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-4xl">📊</span>
+              </div>
+              <h3 className="text-xl font-semibold mb-3">Market Analysis</h3>
               <p className="text-gray-600 mb-4">
-                Step-by-step video content from wellness experts
+                Daily market insights, technical analysis, and expert commentary to stay ahead
               </p>
-              <a href="#" className="text-blue-600 font-medium hover:text-blue-700">
-                Watch Now →
+              <a href="#" className="text-orange-600 font-medium hover:text-orange-700">
+                Read More →
               </a>
             </div>
-            <div className="bg-gray-50 rounded-lg p-8 hover:shadow-lg transition-shadow">
-              <div className="text-4xl mb-4">👥</div>
-              <h3 className="text-xl font-semibold mb-3">Community</h3>
+            <div className="bg-white rounded-lg p-8 hover:shadow-xl transition-all border-2 border-accent-green-100 hover:border-accent-green-200">
+              <div className="bg-accent-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-4xl">👥</span>
+              </div>
+              <h3 className="text-xl font-semibold mb-3">Investor Community</h3>
               <p className="text-gray-600 mb-4">
-                Connect with like-minded individuals on their wellness path
+                Connect with fellow investors, share strategies, and learn from experienced traders
               </p>
-              <a href="#" className="text-blue-600 font-medium hover:text-blue-700">
+              <a href="#" className="text-orange-600 font-medium hover:text-orange-700">
                 Join Us →
               </a>
             </div>
@@ -166,9 +177,9 @@ export default function Home() {
 
       {/* CTA Section */}
       <CTA
-        title="Open your Account in minutes!"
-        description="Join thousands of satisfied customers who have discovered their wellness journey with ZenFlow"
-        buttonText="Get Started Today"
+        title="Open your Demat Account in minutes!"
+        description="Join thousands of investors who trust ZenFlow for their investment journey. Start trading stocks, IPOs, and more today."
+        buttonText="Open Account Now"
         buttonLink="/products"
       />
     </div>
