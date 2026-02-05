@@ -33,6 +33,16 @@ export const navLinks: NavLink[] = [
   { label: "Disclosures", href: "/disclosures" }
 ];
 
+export const secondaryNavLinks: NavLink[] = [
+  { label: "Products", href: "/products" },
+  { label: "Markets", href: "/markets" },
+  { label: "Become a Partner", href: "/partners" },
+  { label: "Knowledge Center", href: "/knowledge" },
+  { label: "Customer Support", href: "/support" },
+  { label: "Community", href: "/community" },
+  { label: "Career", href: "/careers" }
+];
+
 export const heroHighlights = [
   "Equities + bonds + curated themes",
   "Seamless onboarding with guided KYC",
