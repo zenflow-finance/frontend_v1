@@ -43,6 +43,102 @@ export const secondaryNavLinks: NavLink[] = [
   { label: "Career", href: "/careers" }
 ];
 
+// Mega menu content is centralized so we can swap labels/icons later.
+export const megaMenuContent = {
+  products: {
+    investmentServices: [
+      "Algo Trading",
+      "Commodity Trading",
+      "Margin Trading Facility",
+      "Derivative Trading",
+      "Stock Trading"
+    ],
+    wealthManagement: [
+      "Mutual Funds",
+      "IPO",
+      "Foreign Portfolio Investment",
+      "Portfolio Management"
+    ]
+  },
+  markets: {
+    tabs: ["Equity", "Derivative", "Mutual Fund", "IPO", "News"],
+    columns: [
+      {
+        title: "Price Analysis",
+        items: [
+          "Nifty 50",
+          "Bank Nifty",
+          "Top Gainers",
+          "Top Losers",
+          "Out & Under Performers",
+          "Only Buyers & Sellers",
+          "Highs & Lows",
+          "Advances & Declines",
+          "5 Days Up/Down",
+          "Historical Returns",
+          "Heat Map"
+        ]
+      },
+      {
+        title: "Volume Analysis",
+        items: ["Most Active", "Block Deals", "Bulk Deals", "Highest & Lowest Delivery"]
+      },
+      {
+        title: "Index Analysis",
+        items: [
+          "Live Indices",
+          "Rising VDP",
+          "Rising VD Fall in Price",
+          "Price Shockers",
+          "Volume Shockers",
+          "Delivery Shockers"
+        ]
+      },
+      {
+        title: "Corporate Action",
+        items: [
+          "BSE Announcements",
+          "Book Closure",
+          "Board Meetings",
+          "Bonus Issues",
+          "Right Issues",
+          "Split of Face Value",
+          "Dividend Details",
+          "Delisted Companies",
+          "Change of Name"
+        ]
+      },
+      {
+        title: "Other Market",
+        items: [
+          "FII Investments",
+          "DII Investments",
+          "World Indices",
+          "ADR Prices",
+          "Penny Stocks",
+          "Sector Based Analysis",
+          "NSE Holidays"
+        ]
+      },
+      {
+        title: "Top Performing Stocks (NSE)",
+        items: [
+          "Top Performers",
+          "Under Performers",
+          "52 Week High",
+          "52 Week Low",
+          "Top ROCE",
+          "Dividend Yield",
+          "Pledge"
+        ]
+      }
+    ]
+  },
+  knowledge: {
+    items: ["Learn", "Blog", "Newsletters", "Press Release"]
+  }
+};
+
 export const heroHighlights = [
   "Equities + bonds + curated themes",
   "Seamless onboarding with guided KYC",
