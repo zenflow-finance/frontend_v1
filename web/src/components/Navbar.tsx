@@ -71,7 +71,7 @@ export default function Navbar() {
             >
               Login
             </button>
-            <div className="absolute right-0 top-full hidden w-[340px] rounded-3xl border border-ink/10 bg-white p-6 shadow-deep group-hover:block">
+            <div className="absolute right-0 top-full hidden w-[340px] rounded-3xl border border-ink/10 bg-white p-6 shadow-deep group-hover:block z-[55]">
               <div className="card border-ink/10">
                 <p className="text-xs font-semibold uppercase tracking-[0.25em] text-zen-saffron">
                   Tech Login
