@@ -137,21 +137,28 @@ export default function OpenAccountPage() {
           subtitle="Get your demat account ready within 3 minutes in 3 simple steps!"
         />
         <div className="mt-10 grid gap-8 lg:grid-cols-[1fr_0.9fr]">
-          <div className="space-y-4">
+          <div className="space-y-6">
             {openDematSteps.map((step) => (
               <div
                 key={step.step}
-                className="card border-ink/10 bg-white/90"
+                className="flex items-center gap-4 rounded-2xl border border-ink/10 bg-white px-6 py-5 shadow-sm"
               >
-                <p className="text-xs font-semibold uppercase tracking-[0.25em] text-zen-saffron">
-                  {step.step}
-                </p>
-                <p className="mt-2 text-sm font-medium text-ink">{step.title}</p>
+                <div className="flex h-12 w-12 items-center justify-center rounded-2xl border border-zen-saffron/40 bg-zen-saffron/10 text-zen-saffron">
+                  {step.step.replace("STEP ", "")}
+                </div>
+                <div>
+                  <p className="text-xs font-semibold uppercase tracking-[0.25em] text-ink/60">
+                    {step.step}
+                  </p>
+                  <p className="mt-2 text-sm font-medium text-ink">
+                    {step.title}
+                  </p>
+                </div>
               </div>
             ))}
             <a
               href="#open-demat-top"
-              className="mt-2 inline-flex rounded-full bg-ink px-6 py-3 text-xs font-semibold uppercase tracking-[0.2em] text-ivory"
+              className="inline-flex rounded-2xl bg-zen-saffron px-8 py-3 text-xs font-semibold uppercase tracking-[0.2em] text-white shadow-glow"
             >
               Get Started
             </a>
@@ -169,7 +176,7 @@ export default function OpenAccountPage() {
           </div>
           <div className="overflow-hidden rounded-[32px] border border-ink/10 bg-white shadow-sm">
             <iframe
-              className="aspect-video w-full"
+              className="h-[360px] w-full md:h-[420px]"
               src="https://www.youtube.com/embed/A9Xq3FGjpZA"
               title="How to open a Demat account"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
