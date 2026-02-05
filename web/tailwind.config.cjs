@@ -5,22 +5,32 @@ module.exports = {
     extend: {
       colors: {
         ink: "#0f172a",
-        slate: "#1f2937",
-        mist: "#f1f5f9",
-        sand: "#f8fafc",
-        mint: "#e7f8f2",
-        sea: "#0f766e",
-        coral: "#f97316",
-        sunrise: "#fde68a",
-        cloud: "#e2e8f0"
+        ivory: "#fdfaf5",
+        "zen-emerald": "#0f766e",
+        "zen-saffron": "#f59e0b",
+        "zen-sky": "#38bdf8",
+        "zen-accent": "#0f766e"
       },
       boxShadow: {
-        soft: "0 20px 60px -30px rgba(15, 23, 42, 0.25)",
-        glow: "0 16px 40px -28px rgba(15, 118, 110, 0.6)"
+        glow: "0 18px 45px -30px rgba(15, 118, 110, 0.7)",
+        deep: "0 30px 80px -50px rgba(15, 23, 42, 0.35)"
       },
       fontFamily: {
-        sans: ["Manrope", "ui-sans-serif", "system-ui", "sans-serif"],
-        display: ["Clash Display", "Manrope", "ui-sans-serif", "system-ui", "sans-serif"]
+        sans: ["Sora", "ui-sans-serif", "system-ui", "sans-serif"],
+        display: ["Space Grotesk", "Sora", "ui-sans-serif", "system-ui", "sans-serif"]
+      },
+      backgroundImage: {
+        "zen-aurora":
+          "radial-gradient(circle at top, rgba(245, 158, 11, 0.18), transparent 60%), radial-gradient(circle at 20% 20%, rgba(56, 189, 248, 0.12), transparent 55%), radial-gradient(circle at 80% 10%, rgba(15, 118, 110, 0.15), transparent 55%)"
+      },
+      animation: {
+        "float-slow": "float 10s ease-in-out infinite"
+      },
+      keyframes: {
+        float: {
+          "0%, 100%": { transform: "translateY(0px)" },
+          "50%": { transform: "translateY(-8px)" }
+        }
       }
     }
   },

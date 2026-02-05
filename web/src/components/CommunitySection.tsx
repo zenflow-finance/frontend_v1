@@ -1,35 +1,27 @@
-const highlights = [
-  {
-    title: "Community-led answers",
-    description: "Ask verified experts and get guidance within hours."
-  },
-  {
-    title: "Personal support",
-    description: "Dedicated help with KYC, orders, and platform walkthroughs."
-  },
-  {
-    title: "Partner programs",
-    description: "Refer clients and track onboarding progress in one place."
-  }
-];
+import { testimonials } from "@/content/site";
+import SectionHeading from "@/components/SectionHeading";
+import SectionShell from "@/components/SectionShell";
 
+// Social proof with calm, minimal testimonial cards.
 export default function CommunitySection() {
   return (
-    <section id="community" className="section-pad bg-white">
-      <div className="container-base">
-        <h2 className="section-title">You’re never investing alone</h2>
-        <p className="section-subtitle">
-          Our community and support team keep you informed and confident.
-        </p>
-        <div className="mt-10 grid gap-6 md:grid-cols-3">
-          {highlights.map((item) => (
-            <div key={item.title} className="card">
-              <h3 className="text-lg font-semibold text-ink">{item.title}</h3>
-              <p className="mt-3 text-sm text-slate">{item.description}</p>
+    <SectionShell className="bg-ivory/60">
+      <SectionHeading
+        eyebrow="Voices"
+        title="Investors who feel grounded with Zenflow"
+        subtitle="Clear communication builds trust. These are placeholder testimonials." 
+      />
+      <div className="mt-10 grid gap-6 md:grid-cols-3">
+        {testimonials.map((item) => (
+          <div key={item.name} className="card border-ink/10">
+            <p className="text-sm text-ink/70">“{item.quote}”</p>
+            <div className="mt-4">
+              <p className="text-sm font-semibold text-ink">{item.name}</p>
+              <p className="text-xs text-ink/60">{item.role}</p>
             </div>
-          ))}
-        </div>
+          </div>
+        ))}
       </div>
-    </section>
+    </SectionShell>
   );
 }

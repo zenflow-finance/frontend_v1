@@ -1,27 +1,41 @@
+import Link from "next/link";
+
+import SectionShell from "@/components/SectionShell";
+
+// Bottom-of-page CTA to keep focus on account opening.
 export default function CTA() {
   return (
-    <section className="section-pad">
-      <div className="container-base">
-        <div className="card flex flex-col items-start justify-between gap-6 bg-ink text-white md:flex-row md:items-center">
+    <SectionShell>
+      <div className="card border-ink/10 bg-ink text-ivory">
+        <div className="grid gap-6 md:grid-cols-[1.4fr_0.6fr] md:items-center">
           <div>
-            <p className="text-sm uppercase text-sunrise">Start in minutes</p>
-            <h2 className="mt-3 text-3xl font-semibold">
-              Begin your investment journey with clarity.
-            </h2>
-            <p className="mt-3 text-sm text-white/80">
-              KYC-first onboarding, transparent fees, and guided learning.
+            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-ivory/70">
+              Ready to begin
+            </p>
+            <h3 className="mt-4 text-2xl font-semibold">
+              Open your Zenflow account and start building steady wealth.
+            </h3>
+            <p className="mt-3 text-sm text-ivory/70">
+              We keep onboarding clear, guided, and compliant with risk
+              disclosures up front.
             </p>
           </div>
-          <div className="flex w-full flex-wrap gap-3 md:w-auto">
-            <button className="rounded-full bg-white px-6 py-3 text-sm font-semibold text-ink">
-              Start onboarding
-            </button>
-            <button className="rounded-full border border-white/40 px-6 py-3 text-sm font-semibold text-white">
-              Talk to sales
-            </button>
+          <div className="flex flex-col gap-3 sm:flex-row md:justify-end">
+            <Link
+              href="/open-account"
+              className="button-primary bg-ivory text-ink"
+            >
+              Open Account
+            </Link>
+            <Link
+              href="/support"
+              className="button-secondary border-ivory/50 text-ivory hover:border-ivory"
+            >
+              Talk to Us
+            </Link>
           </div>
         </div>
       </div>
-    </section>
+    </SectionShell>
   );
 }

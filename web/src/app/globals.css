@@ -2,17 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap");
+/* Fonts: futuristic but readable (no default stacks only). */
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Sora:wght@300;400;500;600;700&display=swap");
 
 :root {
   color-scheme: light;
 }
 
+/* Base styling keeps the UI minimal and calm. */
 body {
-  @apply bg-sand text-ink;
-  font-family: "Manrope", ui-sans-serif, system-ui, sans-serif;
+  @apply bg-ivory text-ink antialiased;
+  font-family: "Sora", ui-sans-serif, system-ui, sans-serif;
 }
 
+/* Layout helpers */
 .container-base {
   @apply mx-auto w-full max-w-6xl px-6;
 }
@@ -21,26 +24,34 @@ body {
   @apply py-20;
 }
 
-.section-title {
-  @apply text-3xl font-semibold text-ink md:text-4xl;
-}
-
-.section-subtitle {
-  @apply mt-4 text-lg text-slate;
-}
-
+/* Component primitives */
 .card {
-  @apply rounded-3xl border border-cloud bg-white p-6 shadow-soft;
+  @apply rounded-3xl border border-ink/10 bg-white p-6 shadow-sm;
 }
 
 .button-primary {
-  @apply inline-flex items-center justify-center rounded-full bg-sea px-6 py-3 text-sm font-semibold text-white shadow-glow transition hover:opacity-90;
+  @apply inline-flex items-center justify-center rounded-full bg-ink px-6 py-3 text-xs font-semibold uppercase tracking-[0.2em] text-ivory shadow-glow transition hover:-translate-y-0.5;
 }
 
 .button-secondary {
-  @apply inline-flex items-center justify-center rounded-full border border-cloud bg-white px-6 py-3 text-sm font-semibold text-ink transition hover:border-sea hover:text-sea;
+  @apply inline-flex items-center justify-center rounded-full border border-ink/20 bg-transparent px-6 py-3 text-xs font-semibold uppercase tracking-[0.2em] text-ink transition hover:border-ink/50;
 }
 
-.badge {
-  @apply inline-flex items-center rounded-full bg-mint px-3 py-1 text-xs font-semibold text-sea;
+/* Decorative motif: subtle Indian geometry without being loud. */
+.heritage-motif {
+  background-image: radial-gradient(
+      circle at 12% 12%,
+      rgba(245, 158, 11, 0.15),
+      transparent 45%
+    ),
+    radial-gradient(
+      circle at 85% 20%,
+      rgba(15, 118, 110, 0.12),
+      transparent 42%
+    ),
+    radial-gradient(
+      circle at 70% 80%,
+      rgba(56, 189, 248, 0.1),
+      transparent 40%
+    );
 }

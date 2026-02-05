@@ -1,64 +1,54 @@
-const tiers = [
-  {
-    title: "Starter",
-    price: "₹0",
-    description: "Learn, compare, and build your plan.",
-    perks: ["Access learning hub", "Product comparisons", "Market alerts"]
-  },
-  {
-    title: "Active",
-    price: "₹299/mo",
-    description: "Trade with smarter insights and alerts.",
-    perks: ["Advanced alerts", "Portfolio snapshots", "Priority support"],
-    highlight: true
-  },
-  {
-    title: "Pro",
-    price: "Custom",
-    description: "For high-volume traders and partner teams.",
-    perks: ["Dedicated manager", "Custom reporting", "Partner dashboard"]
-  }
-];
+import SectionHeading from "@/components/SectionHeading";
+import SectionShell from "@/components/SectionShell";
 
+// Pricing teaser section with future-proof placeholders.
+// Copy can be updated once pricing is finalized.
 export default function PricingSection() {
+  const plans = [
+    {
+      name: "Essential",
+      price: "₹0",
+      description: "Core investing tools with full compliance support.",
+      perks: ["Equities + bonds access", "Goal templates", "Market alerts"]
+    },
+    {
+      name: "Zen+",
+      price: "₹499/mo",
+      description: "Advanced research, sector pulses, and advisor sessions.",
+      perks: ["Thematic baskets", "Premium research", "Priority support"]
+    },
+    {
+      name: "Wealth Desk",
+      price: "Custom",
+      description: "For teams and HNIs looking for deeper portfolio oversight.",
+      perks: ["Multi-user access", "Dedicated RM", "Custom analytics"]
+    }
+  ];
+
   return (
-    <section id="pricing" className="section-pad">
-      <div className="container-base">
-        <div className="flex flex-wrap items-end justify-between gap-6">
-          <div>
-            <h2 className="section-title">Pricing built for transparency</h2>
-            <p className="section-subtitle">
-              Choose a plan that matches how you invest. Upgrade anytime.
-            </p>
+    <SectionShell>
+      <SectionHeading
+        eyebrow="Pricing"
+        title="Transparent plans with no hidden complexity"
+        subtitle="Keep pricing flexible until we finalize. These tiers are safe placeholders." 
+      />
+      <div className="mt-10 grid gap-6 md:grid-cols-3">
+        {plans.map((plan) => (
+          <div key={plan.name} className="card border-ink/10">
+            <h3 className="text-lg font-semibold text-ink">{plan.name}</h3>
+            <p className="mt-2 text-3xl font-semibold text-ink">{plan.price}</p>
+            <p className="mt-3 text-sm text-ink/70">{plan.description}</p>
+            <ul className="mt-4 space-y-2 text-sm text-ink/70">
+              {plan.perks.map((perk) => (
+                <li key={perk} className="flex items-center gap-2">
+                  <span className="h-2 w-2 rounded-full bg-zen-emerald" />
+                  {perk}
+                </li>
+              ))}
+            </ul>
           </div>
-          <button className="button-secondary">See full pricing</button>
-        </div>
-        <div className="mt-10 grid gap-6 lg:grid-cols-3">
-          {tiers.map((tier) => (
-            <div
-              key={tier.title}
-              className={`card ${tier.highlight ? "border-sea bg-mint" : ""}`}
-            >
-              <p className="text-sm font-semibold text-slate">{tier.title}</p>
-              <p className="mt-3 text-3xl font-semibold text-ink">
-                {tier.price}
-              </p>
-              <p className="mt-3 text-sm text-slate">{tier.description}</p>
-              <ul className="mt-6 space-y-2 text-sm text-ink">
-                {tier.perks.map((perk) => (
-                  <li key={perk} className="flex items-center gap-2">
-                    <span className="h-2 w-2 rounded-full bg-sea" />
-                    {perk}
-                  </li>
-                ))}
-              </ul>
-              <button className="mt-8 w-full rounded-full bg-ink px-4 py-2 text-sm font-semibold text-white">
-                Get started
-              </button>
-            </div>
-          ))}
-        </div>
+        ))}
       </div>
-    </section>
+    </SectionShell>
   );
 }

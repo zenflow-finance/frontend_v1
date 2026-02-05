@@ -1,47 +1,67 @@
+import Link from "next/link";
+
+import { navLinks } from "@/content/site";
+
+// Primary site navigation used across all pages.
+// Uses centralized navLinks so updates stay modular.
 export default function Navbar() {
   return (
-    <header className="sticky top-0 z-30 border-b border-cloud bg-white shadow-sm">
-      <div className="container-base flex h-20 items-center gap-6">
-        <div className="flex min-w-[160px] items-center gap-3">
-          <img src="/logo.svg" alt="Zenflow" className="h-9 w-9" />
+    <header className="sticky top-0 z-40 border-b border-ink/10 bg-ivory/80 backdrop-blur">
+      <div className="container-base flex h-20 items-center justify-between gap-6">
+        {/* Brand lockup */}
+        <Link href="/" className="flex items-center gap-3">
+          <div className="flex h-10 w-10 items-center justify-center rounded-2xl bg-ink text-ivory">
+            <span className="text-sm font-bold tracking-wide">ZF</span>
+          </div>
           <div className="leading-tight">
-            <p className="text-lg font-extrabold tracking-wide text-ink">ZENFLOW</p>
-            <p className="text-xs text-slate">Invest with clarity</p>
+            <p className="text-lg font-semibold tracking-wide text-ink">Zenflow</p>
+            <p className="text-xs text-ink/60">Financial ecosystem</p>
           </div>
-        </div>
+        </Link>
 
-        <div className="hidden flex-1 items-center md:flex">
-          <div className="flex w-full max-w-3xl items-center gap-3 rounded-2xl border border-cloud bg-white px-4 py-2 text-sm text-slate shadow-sm">
-            <input
-              type="text"
-              placeholder="Search for stocks or mutual funds.."
-              className="w-full bg-transparent text-sm text-ink placeholder:text-slate/70 focus:outline-none"
-            />
-            <span className="flex h-8 w-8 items-center justify-center rounded-full border border-coral text-coral">
-              <svg
-                aria-hidden="true"
-                viewBox="0 0 24 24"
-                className="h-4 w-4"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                <circle cx="11" cy="11" r="7" />
-                <path d="m20 20-3.5-3.5" />
-              </svg>
-            </span>
+        {/* Desktop nav */}
+        <nav className="hidden items-center gap-6 text-sm font-medium text-ink/70 md:flex">
+          {navLinks.map((link) => (
+            <Link
+              key={link.href}
+              href={link.href}
+              className="transition hover:text-ink"
+            >
+              {link.label}
+            </Link>
+          ))}
+        </nav>
+
+        {/* Mobile menu (no JS, keeps layout lightweight) */}
+        <details className="relative md:hidden">
+          <summary className="list-none rounded-full border border-ink/20 px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-ink">
+            Menu
+          </summary>
+          <div className="absolute right-0 mt-3 w-48 rounded-2xl border border-ink/10 bg-white p-4 shadow-deep">
+            <div className="flex flex-col gap-3 text-sm text-ink/70">
+              {navLinks.map((link) => (
+                <Link key={link.href} href={link.href}>
+                  {link.label}
+                </Link>
+              ))}
+            </div>
           </div>
-        </div>
+        </details>
 
-        <div className="ml-auto flex items-center gap-3">
-          <button className="rounded-xl border border-coral px-5 py-2 text-sm font-semibold text-coral transition hover:bg-coral/10">
+        {/* Primary CTA */}
+        <div className="flex items-center gap-3">
+          <Link
+            href="/open-account"
+            className="hidden rounded-full border border-ink/20 px-4 py-2 text-xs font-semibold text-ink transition hover:border-ink/50 sm:inline-flex"
+          >
             Login
-          </button>
-          <button className="rounded-xl bg-coral px-5 py-2 text-sm font-semibold text-white shadow-glow transition hover:opacity-90">
-            Open Demat Account
-          </button>
+          </Link>
+          <Link
+            href="/open-account"
+            className="rounded-full bg-ink px-5 py-2 text-xs font-semibold uppercase tracking-wide text-ivory shadow-glow transition hover:-translate-y-0.5"
+          >
+            Open Account
+          </Link>
         </div>
       </div>
     </header>

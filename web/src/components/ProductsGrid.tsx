@@ -1,54 +1,32 @@
-const products = [
-  {
-    title: "IPOs",
-    description: "Stay ahead of new listings with guided checklists.",
-    tag: "New listings"
-  },
-  {
-    title: "Mutual Funds",
-    description: "Compare goals, returns, and risk side by side.",
-    tag: "Goal-based"
-  },
-  {
-    title: "Equity",
-    description: "Track performance with smart alerts and insights.",
-    tag: "Real-time"
-  },
-  {
-    title: "Loans",
-    description: "Clear eligibility checks with transparent pricing.",
-    tag: "Secure"
-  }
-];
+import { ecosystemPillars } from "@/content/site";
+import SectionHeading from "@/components/SectionHeading";
+import SectionShell from "@/components/SectionShell";
 
+// Ecosystem overview: the "financial ecosystem" translated into pillars.
 export default function ProductsGrid() {
   return (
-    <section id="products" className="section-pad">
-      <div className="container-base">
-        <div className="flex flex-wrap items-end justify-between gap-6">
-          <div>
-            <h2 className="section-title">All the ways to grow your money</h2>
-            <p className="section-subtitle">
-              Explore products curated for new investors and active traders.
+    <SectionShell>
+      <SectionHeading
+        eyebrow="Ecosystem"
+        title="One calm surface for every investing move"
+        subtitle="Zenflow connects research, execution, and guidance so investors never feel lost." 
+      />
+      <div className="mt-10 grid gap-6 md:grid-cols-3">
+        {ecosystemPillars.map((pillar) => (
+          <div
+            key={pillar.title}
+            className="card border-ink/10 bg-white/90"
+          >
+            <p className="text-xs font-semibold uppercase tracking-[0.25em] text-ink/50">
+              {pillar.tag}
             </p>
+            <h3 className="mt-4 text-xl font-semibold text-ink">
+              {pillar.title}
+            </h3>
+            <p className="mt-3 text-sm text-ink/70">{pillar.description}</p>
           </div>
-          <button className="button-secondary">View all products</button>
-        </div>
-        <div className="mt-10 grid gap-6 md:grid-cols-2">
-          {products.map((product) => (
-            <div key={product.title} className="card">
-              <span className="badge">{product.tag}</span>
-              <h3 className="mt-4 text-xl font-semibold text-ink">
-                {product.title}
-              </h3>
-              <p className="mt-3 text-sm text-slate">{product.description}</p>
-              <button className="mt-6 text-sm font-semibold text-sea">
-                Learn more →
-              </button>
-            </div>
-          ))}
-        </div>
+        ))}
       </div>
-    </section>
+    </SectionShell>
   );
 }
