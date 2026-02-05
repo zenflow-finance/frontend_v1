@@ -1,5 +1,6 @@
 import SectionHeading from "@/components/SectionHeading";
 import SectionShell from "@/components/SectionShell";
+import ResponsiveAssetImage from "@/components/ResponsiveAssetImage";
 import { openDematAssets } from "@/content/openDematAssets";
 import {
   dematAdvantages,
@@ -17,28 +18,6 @@ import {
   rocketAppFeatures,
   tradingOptions
 } from "@/content/openDematContent";
-
-// Responsive image helper to swap web/tablet/mobile placeholders.
-function ResponsiveImage({
-  asset,
-  className = ""
-}: {
-  asset: typeof openDematAssets.hero;
-  className?: string;
-}) {
-  return (
-    <picture>
-      <source media="(max-width: 640px)" srcSet={asset.mobile} />
-      <source media="(max-width: 1024px)" srcSet={asset.tab} />
-      <img
-        src={asset.web}
-        alt={asset.alt}
-        className={className}
-        loading="lazy"
-      />
-    </picture>
-  );
-}
 
 // Open Demat Account landing page.
 // Layout is kept close to the reference while using Zenflow branding.
@@ -128,7 +107,7 @@ export default function OpenAccountPage() {
           </div>
 
           <div className="flex items-center justify-center">
-            <ResponsiveImage
+            <ResponsiveAssetImage
               asset={openDematAssets.hero}
               className="w-full max-w-xl rounded-[32px] border border-ink/10 shadow-deep"
             />
@@ -186,7 +165,7 @@ export default function OpenAccountPage() {
               Open Demat Account
             </button>
           </div>
-          <ResponsiveImage
+          <ResponsiveAssetImage
             asset={openDematAssets.steps}
             className="w-full rounded-[32px] border border-ink/10 shadow-sm"
           />
@@ -217,7 +196,7 @@ export default function OpenAccountPage() {
           subtitle="Replace this placeholder with real awards and badges."
         />
         <div className="mt-8">
-          <ResponsiveImage
+          <ResponsiveAssetImage
             asset={openDematAssets.awards}
             className="w-full rounded-[32px] border border-ink/10"
           />
@@ -232,7 +211,7 @@ export default function OpenAccountPage() {
           subtitle="Built for super traders and long-term investors."
         />
         <div className="mt-10 grid gap-8 lg:grid-cols-[0.9fr_1.1fr]">
-          <ResponsiveImage
+          <ResponsiveAssetImage
             asset={openDematAssets.app}
             className="w-full rounded-[32px] border border-ink/10"
           />
@@ -255,7 +234,7 @@ export default function OpenAccountPage() {
         />
         <div className="mt-8 grid gap-8 lg:grid-cols-[1.1fr_0.9fr]">
           <p className="text-sm text-ink/70">{dematDefinition}</p>
-          <ResponsiveImage
+          <ResponsiveAssetImage
             asset={openDematAssets.demat}
             className="w-full rounded-[32px] border border-ink/10"
           />

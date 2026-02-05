@@ -6,6 +6,9 @@ export type ResponsiveAsset = {
   web: string;
   tab: string;
   mobile: string;
+  webPng?: string;
+  tabPng?: string;
+  mobilePng?: string;
   sizes: {
     web: string;
     tab: string;
@@ -19,6 +22,9 @@ export const openDematAssets = {
     web: "/open-demat/01-web.svg",
     tab: "/open-demat/01-tab.svg",
     mobile: "/open-demat/01-mobile.svg",
+    webPng: "/open-demat/01-web.png",
+    tabPng: "/open-demat/01-tab.png",
+    mobilePng: "/open-demat/01-mobile.png",
     sizes: {
       web: "1200x800",
       tab: "900x700",
