@@ -4,6 +4,7 @@ import Hero from "@/components/Hero";
 import LearningSection from "@/components/LearningSection";
 import PricingSection from "@/components/PricingSection";
 import ProductsGrid from "@/components/ProductsGrid";
+import PromoModal from "@/components/PromoModal";
 import RegulatorySection from "@/components/RegulatorySection";
 import TrustBar from "@/components/TrustBar";
 
@@ -11,6 +12,7 @@ import TrustBar from "@/components/TrustBar";
 export default function Home() {
   return (
     <main>
+      <PromoModal />
       <Hero />
       <TrustBar />
       <RegulatorySection />
