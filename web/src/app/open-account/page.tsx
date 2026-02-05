@@ -187,20 +187,41 @@ export default function OpenAccountPage() {
       </SectionShell>
 
       {/* Why choose section */}
-      <SectionShell className="bg-ivory/60 py-14">
-        <SectionHeading
-          eyebrow="Why Zenflow"
-          title="Why choose Zenflow?"
-          subtitle="Speed, clarity, and compliant onboarding from day one."
-        />
-        <div className="mt-8 grid gap-4 md:grid-cols-2">
-          {openDematWhyChoose.map((item) => (
-            <div key={item} className="card border-ink/10">
-              <p className="text-sm text-ink/70">{item}</p>
-            </div>
-          ))}
+      <section className="bg-ink py-16">
+        <div className="container-base">
+          <div className="text-center">
+            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-zen-saffron">
+              Why Zenflow
+            </p>
+            <h2 className="mt-4 text-3xl font-semibold text-white md:text-4xl">
+              Why choose Zenflow?
+            </h2>
+            <p className="mt-3 text-sm text-white/70">
+              Speed, clarity, and compliant onboarding from day one.
+            </p>
+          </div>
+
+          <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+            {openDematWhyChoose.map((item, index) => (
+              <div
+                key={item}
+                className="overflow-hidden rounded-3xl border border-white/10 bg-white/5 shadow-deep"
+              >
+                <div className="h-36 w-full bg-[radial-gradient(circle_at_top,_rgba(245,158,11,0.35),_rgba(15,23,42,0.9))]" />
+                <div className="px-5 pb-6 pt-4">
+                  <p className="text-xs font-semibold uppercase tracking-[0.2em] text-zen-saffron">
+                    {String(index + 1).padStart(2, "0")}
+                  </p>
+                  <p className="mt-3 text-sm font-semibold text-white">{item}</p>
+                  <p className="mt-2 text-xs text-white/60">
+                    Replace this placeholder image with curated visuals later.
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
-      </SectionShell>
+      </section>
 
       {/* Awards section */}
       <SectionShell className="py-14">
