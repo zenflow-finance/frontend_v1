@@ -252,7 +252,7 @@ export const footerColumns = [
   {
     title: "Support",
     links: [
-      { label: "Open Account", href: "/open-account" },
+      { label: "Open Demat Account", href: "/open-account" },
       { label: "Help Center", href: "/support" },
       { label: "Disclosures", href: "/disclosures" }
     ]

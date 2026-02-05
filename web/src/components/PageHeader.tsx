@@ -4,7 +4,7 @@ import Link from "next/link";
 export default function PageHeader({
   title,
   subtitle,
-  ctaLabel = "Open Account",
+  ctaLabel = "Open Demat Account",
   ctaHref = "/open-account"
 }: {
   title: string;

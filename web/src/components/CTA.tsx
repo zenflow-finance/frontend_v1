@@ -25,7 +25,7 @@ export default function CTA() {
               href="/open-account"
               className="button-primary bg-ivory text-ink"
             >
-              Open Account
+              Open Demat Account
             </Link>
             <Link
               href="/support"

@@ -26,7 +26,7 @@ export default function Hero() {
 
           <div className="mt-8 flex flex-wrap items-center gap-4">
             <Link href="/open-account" className="button-primary">
-              Open Account
+              Open Demat Account
             </Link>
             <Link href="/products" className="button-secondary">
               Explore Products

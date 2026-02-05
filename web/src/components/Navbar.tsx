@@ -119,7 +119,7 @@ export default function Navbar() {
             href="/open-account"
             className="rounded-xl bg-zen-saffron px-5 py-2 text-xs font-semibold text-white shadow-glow transition hover:-translate-y-0.5"
           >
-            Open Account
+            Open Demat Account
           </Link>
         </div>
       </div>

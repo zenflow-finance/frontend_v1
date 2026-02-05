@@ -23,7 +23,7 @@ export default function LoginPage() {
       <PageHeader
         title="Login"
         subtitle="Choose the portal that fits your role or workflow."
-        ctaLabel="Open Account"
+        ctaLabel="Open Demat Account"
         ctaHref="/open-account"
       />
       <SectionShell>
