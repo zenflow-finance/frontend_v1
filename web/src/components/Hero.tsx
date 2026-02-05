@@ -44,54 +44,69 @@ export default function Hero() {
         </div>
 
         <div className="relative">
-          <div className="absolute -top-6 right-6 h-36 w-36 animate-float-slow rounded-full bg-zen-saffron/20 blur-3xl" />
-          <div className="absolute -bottom-10 left-4 h-40 w-40 animate-float-slow rounded-full bg-zen-emerald/20 blur-3xl" />
+          {/* Illustration block with rupee elements (no animation). */}
+          <div className="relative rounded-[36px] border border-ink/10 bg-white/80 p-8 shadow-deep">
+            <div className="absolute -right-6 top-10 h-28 w-28 rounded-[28px] bg-zen-saffron/25" />
+            <div className="absolute bottom-6 right-6 h-24 w-24 rounded-[28px] bg-zen-emerald/25" />
+            <div className="absolute -left-8 top-6 h-12 w-12 rounded-full bg-zen-sky/20" />
+            <div className="absolute -bottom-6 left-10 h-10 w-10 rounded-full bg-zen-saffron/20" />
 
-          {/* Mock dashboard card */}
-          <div className="card relative border border-ink/10 bg-white/90 shadow-deep">
-            <div className="flex items-start justify-between">
-              <div>
-                <p className="text-xs uppercase tracking-[0.2em] text-ink/50">
-                  Portfolio rhythm
-                </p>
-                <p className="mt-2 text-3xl font-semibold text-ink">₹6,42,580</p>
-                <p className="mt-1 text-sm text-zen-emerald">+9.4% monthly</p>
-              </div>
-              <div className="rounded-full border border-ink/10 bg-ivory px-3 py-1 text-xs font-semibold text-ink/70">
-                Balanced
-              </div>
-            </div>
+            <div className="relative">
+              <div className="h-72 w-full rounded-[32px] border border-ink/10 bg-ivory/80" />
 
-            <div className="mt-6 space-y-4">
-              {[
-                { label: "Equities", value: "₹3,10,200", change: "+6.1%" },
-                { label: "Bonds", value: "₹1,92,380", change: "+2.5%" },
-                { label: "Themes", value: "₹1,40,000", change: "+4.0%" }
-              ].map((item) => (
-                <div
-                  key={item.label}
-                  className="flex items-center justify-between rounded-2xl border border-ink/10 bg-ivory/80 px-4 py-3"
-                >
-                  <p className="text-sm font-medium text-ink">{item.label}</p>
-                  <div className="text-right">
-                    <p className="text-sm font-semibold text-ink">{item.value}</p>
-                    <p className="text-xs text-zen-emerald">{item.change}</p>
+              {/* Floating feature tiles */}
+              <div className="absolute -left-4 top-10 rounded-2xl border border-ink/10 bg-white px-4 py-3 shadow-sm">
+                <div className="flex items-center gap-3">
+                  <span className="flex h-9 w-9 items-center justify-center rounded-full bg-zen-sky/20 text-zen-sky">
+                    ₹
+                  </span>
+                  <div>
+                    <p className="text-sm font-semibold text-ink">IPO</p>
+                    <p className="text-xs text-ink/60">Launch-ready</p>
                   </div>
                 </div>
-              ))}
+              </div>
+
+              <div className="absolute right-2 top-2 rounded-2xl border border-ink/10 bg-white px-4 py-3 shadow-sm">
+                <div className="flex items-center gap-3">
+                  <span className="flex h-9 w-9 items-center justify-center rounded-full bg-zen-saffron/20 text-zen-saffron">
+                    ₹
+                  </span>
+                  <div>
+                    <p className="text-sm font-semibold text-ink">FPI</p>
+                    <p className="text-xs text-ink/60">Global access</p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="absolute bottom-6 right-6 rounded-2xl border border-ink/10 bg-white px-4 py-3 shadow-sm">
+                <div className="flex items-center gap-3">
+                  <span className="flex h-9 w-9 items-center justify-center rounded-full bg-zen-emerald/20 text-zen-emerald">
+                    ₹
+                  </span>
+                  <div>
+                    <p className="text-sm font-semibold text-ink">SIP</p>
+                    <p className="text-xs text-ink/60">Steady growth</p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="absolute left-10 bottom-4 rounded-2xl border border-ink/10 bg-white px-4 py-3 shadow-sm">
+                <div className="flex items-center gap-3">
+                  <span className="flex h-9 w-9 items-center justify-center rounded-full bg-zen-sky/20 text-zen-sky">
+                    ₹
+                  </span>
+                  <div>
+                    <p className="text-sm font-semibold text-ink">Bonds</p>
+                    <p className="text-xs text-ink/60">Stable yield</p>
+                  </div>
+                </div>
+              </div>
             </div>
 
-            <div className="mt-6 rounded-2xl border border-ink/10 bg-white/80 p-4">
-              <p className="text-xs uppercase tracking-[0.2em] text-ink/50">
-                Next step
-              </p>
-              <p className="mt-2 text-sm font-medium text-ink">
-                Complete your KYC journey in 3 guided steps.
-              </p>
-              <button className="mt-4 w-full rounded-full bg-ink px-4 py-2 text-sm font-semibold text-ivory">
-                Continue onboarding
-              </button>
-            </div>
+            <p className="mt-6 text-xs text-ink/60">
+              Illustration placeholder. We can replace with final artwork later.
+            </p>
           </div>
         </div>
       </div>
