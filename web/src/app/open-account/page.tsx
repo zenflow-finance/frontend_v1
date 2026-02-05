@@ -47,57 +47,83 @@ export default function OpenAccountPage() {
     <main>
       {/* Hero section with form and offers */}
       <section className="relative overflow-hidden bg-ivory/80">
-        <div className="container-base grid gap-10 py-16 lg:grid-cols-[1.1fr_0.9fr]">
+        <div className="container-base grid gap-12 py-16 lg:grid-cols-[1.1fr_0.9fr]">
           <div>
-            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-zen-saffron">
-              {openDematHero.offerPill}
+            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-ink/70">
+              Join Zenflow Family!
             </p>
             <h1 className="mt-4 text-4xl font-semibold text-ink md:text-5xl">
-              {openDematHero.title}
+              Open a{" "}
+              <span className="text-zen-saffron">Demat Account</span>
             </h1>
-            <p className="mt-4 text-lg text-ink/70">
-              {openDematHero.subtitle}
-            </p>
 
-            <div className="mt-6 rounded-3xl border border-ink/10 bg-white p-4 shadow-sm">
-              {/* Simple lead-capture form (frontend only) */}
-              <div className="grid gap-4 sm:grid-cols-[1.2fr_1.2fr_0.6fr]">
-                <input
-                  type="text"
-                  placeholder="Name"
-                  className="w-full rounded-2xl border border-ink/10 px-4 py-3 text-sm"
-                />
-                <input
-                  type="tel"
-                  placeholder="Mobile No."
-                  className="w-full rounded-2xl border border-ink/10 px-4 py-3 text-sm"
-                />
-                <button className="rounded-2xl bg-zen-saffron px-4 py-3 text-sm font-semibold text-white shadow-glow">
-                  Get Started
-                </button>
-              </div>
-              <p className="mt-3 text-xs text-ink/50">
-                By clicking “Get Started”, you agree to our Terms & Conditions
-                and Privacy Policy.
-              </p>
-              <div className="mt-3 flex items-start gap-2 text-xs text-ink/50">
-                <span className="mt-1 inline-block h-3 w-3 rounded-full border border-zen-saffron" />
-                <p>
-                  I authorize Zenflow to contact me via SMS, calls, and
-                  informational updates related to Demat onboarding.
-                </p>
+            <div className="mt-6 rounded-[28px] border border-ink/10 bg-white px-6 py-5 shadow-sm">
+              <div className="grid gap-6 text-sm text-ink/70 md:grid-cols-3">
+                <div className="flex items-center gap-4">
+                  <div className="flex h-12 w-12 items-center justify-center rounded-full bg-zen-saffron/15 text-zen-saffron text-2xl">
+                    ₹
+                  </div>
+                  <div>
+                    <p className="text-2xl font-semibold text-ink">₹0</p>
+                    <p className="text-sm text-ink/70">AMC Charges*</p>
+                  </div>
+                </div>
+                <div className="flex items-center gap-4 md:border-l md:border-ink/10 md:pl-6">
+                  <div className="flex h-12 w-12 items-center justify-center rounded-full bg-zen-saffron/15 text-zen-saffron text-xl">
+                    ↓
+                  </div>
+                  <div>
+                    <p className="text-lg font-semibold text-ink">Low</p>
+                    <p className="text-sm text-ink/70">Brokerage*</p>
+                  </div>
+                </div>
+                <div className="flex items-center gap-4 md:border-l md:border-ink/10 md:pl-6">
+                  <div className="flex h-12 w-12 items-center justify-center rounded-full bg-zen-saffron/15 text-zen-saffron text-xl">
+                    %
+                  </div>
+                  <div>
+                    <p className="text-lg font-semibold text-ink">Low MTF</p>
+                    <p className="text-sm text-ink/70">Interest*</p>
+                  </div>
+                </div>
               </div>
             </div>
 
-            <div className="mt-6 flex flex-wrap gap-2">
-              {openDematOffers.map((item) => (
-                <span
-                  key={item}
-                  className="rounded-full border border-ink/10 bg-white px-3 py-1 text-xs text-ink/70"
-                >
-                  {item}
-                </span>
-              ))}
+            <p className="mt-6 text-lg text-ink/70">
+              Open Demat and Trading account in 3 minutes
+            </p>
+
+            <div className="mt-4 rounded-2xl bg-ink p-3 shadow-deep sm:flex sm:items-center sm:gap-3">
+              <div className="flex flex-1 items-center rounded-xl bg-white px-4 py-3 text-sm">
+                <span className="text-ink/60">+91</span>
+                <span className="mx-3 h-5 w-px bg-ink/10" />
+                <input
+                  type="tel"
+                  placeholder="Enter Number"
+                  className="w-full bg-transparent text-sm text-ink placeholder:text-ink/40 focus:outline-none"
+                />
+              </div>
+              <button className="mt-3 w-full rounded-xl bg-zen-saffron px-5 py-3 text-sm font-semibold text-white shadow-glow sm:mt-0 sm:w-auto">
+                Open Demat Account
+              </button>
+            </div>
+
+            <p className="mt-3 text-xs text-ink/50">
+              By clicking “Open Demat Account”, you agree to our Terms &
+              Conditions and confirm that you have read our Privacy Policy.
+            </p>
+            <div className="mt-3 flex items-start gap-2 text-xs text-ink/50">
+              <span className="mt-1 inline-block h-3 w-3 rounded-full border border-zen-saffron" />
+              <p>
+                I authorize Zenflow to contact me via SMS, messages, promotional,
+                and informational content.
+              </p>
+            </div>
+
+            <div className="mt-6 flex flex-wrap gap-6 text-sm text-ink/70">
+              <span>10K+ App Downloads and Growing!</span>
+              <span>4.5 Play Store Rating</span>
+              <span>Advance Investing & Trading Tools</span>
             </div>
           </div>
 
