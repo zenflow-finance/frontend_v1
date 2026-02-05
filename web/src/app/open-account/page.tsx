@@ -80,6 +80,13 @@ export default function OpenAccountPage() {
                 By clicking “Get Started”, you agree to our Terms & Conditions
                 and Privacy Policy.
               </p>
+              <div className="mt-3 flex items-start gap-2 text-xs text-ink/50">
+                <span className="mt-1 inline-block h-3 w-3 rounded-full border border-zen-saffron" />
+                <p>
+                  I authorize Zenflow to contact me via SMS, calls, and
+                  informational updates related to Demat onboarding.
+                </p>
+              </div>
             </div>
 
             <div className="mt-6 flex flex-wrap gap-2">
@@ -104,7 +111,7 @@ export default function OpenAccountPage() {
       </section>
 
       {/* Steps section */}
-      <SectionShell>
+      <SectionShell className="py-14">
         <SectionHeading
           eyebrow="How It Works"
           title="How to open a Demat account online with Zenflow"
@@ -135,7 +142,7 @@ export default function OpenAccountPage() {
       </SectionShell>
 
       {/* Why choose section */}
-      <SectionShell className="bg-ivory/60">
+      <SectionShell className="bg-ivory/60 py-14">
         <SectionHeading
           eyebrow="Why Zenflow"
           title="Why choose Zenflow?"
@@ -151,7 +158,7 @@ export default function OpenAccountPage() {
       </SectionShell>
 
       {/* Awards section */}
-      <SectionShell>
+      <SectionShell className="py-14">
         <SectionHeading
           eyebrow="Trust"
           title="We are highly awarded and trusted"
@@ -166,7 +173,7 @@ export default function OpenAccountPage() {
       </SectionShell>
 
       {/* Rocket app section */}
-      <SectionShell className="bg-ivory/60">
+      <SectionShell className="bg-ivory/60 py-14">
         <SectionHeading
           eyebrow="Rocket"
           title="Our investing & trading platform Rocket app"
@@ -188,7 +195,7 @@ export default function OpenAccountPage() {
       </SectionShell>
 
       {/* Demat definition */}
-      <SectionShell>
+      <SectionShell className="py-14">
         <SectionHeading
           eyebrow="Basics"
           title="What is a Demat account?"
@@ -204,7 +211,7 @@ export default function OpenAccountPage() {
       </SectionShell>
 
       {/* Types of demat accounts */}
-      <SectionShell className="bg-ivory/60">
+      <SectionShell className="bg-ivory/60 py-14">
         <SectionHeading
           eyebrow="Types"
           title="Types of Demat accounts"
@@ -221,7 +228,7 @@ export default function OpenAccountPage() {
       </SectionShell>
 
       {/* Key benefits */}
-      <SectionShell>
+      <SectionShell className="py-14">
         <SectionHeading
           eyebrow="Benefits"
           title="Key benefits of opening a Demat account online"
@@ -236,7 +243,7 @@ export default function OpenAccountPage() {
       </SectionShell>
 
       {/* Common terms */}
-      <SectionShell className="bg-ivory/60">
+      <SectionShell className="bg-ivory/60 py-14">
         <SectionHeading
           eyebrow="Glossary"
           title="Common Demat account terms you should know"
@@ -252,7 +259,7 @@ export default function OpenAccountPage() {
       </SectionShell>
 
       {/* Trading options */}
-      <SectionShell>
+      <SectionShell className="py-14">
         <SectionHeading
           eyebrow="Instruments"
           title="Trading & investment options with a Zenflow Demat account"
@@ -267,7 +274,7 @@ export default function OpenAccountPage() {
       </SectionShell>
 
       {/* How to open */}
-      <SectionShell className="bg-ivory/60">
+      <SectionShell className="bg-ivory/60 py-14">
         <SectionHeading
           eyebrow="Process"
           title="How to open a Demat account with Zenflow"
@@ -282,7 +289,7 @@ export default function OpenAccountPage() {
       </SectionShell>
 
       {/* Good demat features */}
-      <SectionShell>
+      <SectionShell className="py-14">
         <SectionHeading
           eyebrow="Quality"
           title="Features of a good Demat account"
@@ -297,7 +304,7 @@ export default function OpenAccountPage() {
       </SectionShell>
 
       {/* Things to consider */}
-      <SectionShell className="bg-ivory/60">
+      <SectionShell className="bg-ivory/60 py-14">
         <SectionHeading
           eyebrow="Checklist"
           title="Things to consider before opening a Demat account"
@@ -312,7 +319,7 @@ export default function OpenAccountPage() {
       </SectionShell>
 
       {/* Advantages */}
-      <SectionShell>
+      <SectionShell className="py-14">
         <SectionHeading
           eyebrow="Advantages"
           title="Zenflow Demat account advantages"
@@ -323,6 +330,40 @@ export default function OpenAccountPage() {
               <p className="text-sm text-ink/70">{item}</p>
             </div>
           ))}
+        </div>
+      </SectionShell>
+
+      {/* Compliance block (Zenflow wording placeholder) */}
+      <SectionShell className="py-12">
+        <div className="card border-ink/10 bg-white">
+          <h3 className="text-lg font-semibold text-ink">
+            Compliance & Disclosures
+          </h3>
+          <p className="mt-3 text-sm text-ink/70">
+            Zenflow is preparing regulatory registrations and memberships that
+            will be published here prior to launch. Disclosures are provided
+            for investor awareness and will be finalized with legal counsel.
+          </p>
+          <div className="mt-4 grid gap-4 text-xs text-ink/60 md:grid-cols-2">
+            <div>
+              <p className="font-semibold text-ink/70">
+                SEBI Registration No. (Placeholder)
+              </p>
+              <p>Zenflow Finance Pvt. Ltd.</p>
+              <p>Registered Address Line 1</p>
+              <p>Registered Address Line 2</p>
+            </div>
+            <div>
+              <p className="font-semibold text-ink/70">
+                Investor Disclaimer (Placeholder)
+              </p>
+              <p>
+                Investments in securities markets are subject to market risks.
+                Read all related documents carefully before investing.
+              </p>
+              <p>Subject to IPV verification.</p>
+            </div>
+          </div>
         </div>
       </SectionShell>
     </main>
