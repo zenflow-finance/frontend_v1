@@ -84,10 +84,7 @@ export default function Navbar() {
 
               <div className="mt-6 grid gap-6 md:grid-cols-2">
                 <div>
-                  <p className="text-xs font-semibold uppercase tracking-[0.25em] text-zen-saffron">
-                    New
-                  </p>
-                  <ul className="mt-3 space-y-2 text-sm text-ink/80">
+                  <ul className="space-y-2 text-sm text-ink/80">
                     {[
                       { label: "Rocket Web", href: "/login/rocket-web-new" },
                       { label: "Backoffice Client", href: "/login/backoffice-client" },
@@ -102,12 +99,8 @@ export default function Navbar() {
                   </ul>
                 </div>
                 <div>
-                  <p className="text-xs font-semibold uppercase tracking-[0.25em] text-zen-saffron">
-                    Old
-                  </p>
-                  <ul className="mt-3 space-y-2 text-sm text-ink/80">
+                  <ul className="space-y-2 text-sm text-ink/80">
                     {[
-                      { label: "Rocket Web", href: "/login/rocket-web-old" },
                       { label: "Fund Transfer", href: "/login/fund-transfer" },
                       { label: "Wealth", href: "/login/wealth" }
                     ].map((item) => (
