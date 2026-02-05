@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 import { megaMenuContent, secondaryNavLinks } from "@/content/site";
@@ -8,13 +9,21 @@ export default function Navbar() {
   return (
     <header className="sticky top-0 z-40 border-b border-ink/10 bg-white/90 backdrop-blur">
       <div className="container-base flex flex-wrap items-center gap-4 py-4">
-        {/* Brand lockup (swap icon once the final logo file is added). */}
+        {/* Brand lockup */}
         <Link href="/" className="flex items-center gap-3">
-          <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-ink text-ivory">
-            <span className="text-sm font-bold tracking-wide">ZF</span>
+          <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-white">
+            <Image
+              src="/Zenflow-finance.png"
+              alt="Zenflow Finance"
+              width={48}
+              height={48}
+              className="h-12 w-12 object-contain"
+            />
           </div>
           <div className="leading-tight">
-            <p className="text-lg font-semibold tracking-wide text-ink">Zenflow</p>
+            <p className="text-lg font-semibold tracking-wide text-ink">
+              Zenflow
+            </p>
             <p className="text-xs text-ink/60">Finance</p>
           </div>
         </Link>
