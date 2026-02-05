@@ -64,12 +64,64 @@ export default function Navbar() {
 
         {/* Primary actions */}
         <div className="ml-auto flex items-center gap-3">
-          <Link
-            href="/login"
-            className="rounded-xl border border-zen-saffron px-4 py-2 text-xs font-semibold text-zen-saffron transition hover:bg-zen-saffron/10"
-          >
-            Login
-          </Link>
+          <div className="group relative">
+            <button
+              type="button"
+              className="rounded-xl border border-zen-saffron px-4 py-2 text-xs font-semibold text-zen-saffron transition hover:bg-zen-saffron/10"
+            >
+              Login
+            </button>
+            <div className="absolute right-0 top-full hidden w-[340px] rounded-3xl border border-ink/10 bg-white p-6 shadow-deep group-hover:block">
+              <div className="card border-ink/10">
+                <p className="text-xs font-semibold uppercase tracking-[0.25em] text-zen-saffron">
+                  Tech Login
+                </p>
+                <div className="mt-4 flex items-center gap-3 text-sm font-medium text-ink">
+                  <span className="text-zen-saffron">›</span>
+                  <Link href="/login/back-office">Back Office</Link>
+                </div>
+              </div>
+
+              <div className="mt-6 grid gap-6 md:grid-cols-2">
+                <div>
+                  <p className="text-xs font-semibold uppercase tracking-[0.25em] text-zen-saffron">
+                    New
+                  </p>
+                  <ul className="mt-3 space-y-2 text-sm text-ink/80">
+                    {[
+                      { label: "Rocket Web", href: "/login/rocket-web-new" },
+                      { label: "Backoffice Client", href: "/login/backoffice-client" },
+                      { label: "Backoffice Branch", href: "/login/backoffice-branch" },
+                      { label: "Re-KYC", href: "/login/re-kyc" }
+                    ].map((item) => (
+                      <li key={item.href} className="flex items-center gap-2">
+                        <span className="text-zen-saffron">›</span>
+                        <Link href={item.href}>{item.label}</Link>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <div>
+                  <p className="text-xs font-semibold uppercase tracking-[0.25em] text-zen-saffron">
+                    Old
+                  </p>
+                  <ul className="mt-3 space-y-2 text-sm text-ink/80">
+                    {[
+                      { label: "Rocket Web", href: "/login/rocket-web-old" },
+                      { label: "Fund Transfer", href: "/login/fund-transfer" },
+                      { label: "Wealth", href: "/login/wealth" }
+                    ].map((item) => (
+                      <li key={item.href} className="flex items-center gap-2">
+                        <span className="text-zen-saffron">›</span>
+                        <Link href={item.href}>{item.label}</Link>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
           <Link
             href="/open-account"
             className="rounded-xl bg-zen-saffron px-5 py-2 text-xs font-semibold text-white shadow-glow transition hover:-translate-y-0.5"
