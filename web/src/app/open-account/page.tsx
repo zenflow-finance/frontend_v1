@@ -25,7 +25,7 @@ export default function OpenAccountPage() {
   return (
     <main>
       {/* Hero section with form and offers */}
-      <section className="relative overflow-hidden bg-ivory/80">
+      <section id="open-demat-top" className="relative overflow-hidden bg-ivory/80">
         <div className="container-base grid gap-12 py-16 lg:grid-cols-[1.1fr_0.9fr]">
           <div>
             <p className="text-sm font-semibold uppercase tracking-[0.2em] text-ink/70">
@@ -133,8 +133,8 @@ export default function OpenAccountPage() {
       <SectionShell className="py-14">
         <SectionHeading
           eyebrow="How It Works"
-          title="How to open a Demat account online with Zenflow"
-          subtitle="Get your Demat account ready within minutes in simple steps."
+          title="How to open a Demat account online with Zenflow Finance?"
+          subtitle="Get your demat account ready within 3 minutes in 3 simple steps!"
         />
         <div className="mt-10 grid gap-8 lg:grid-cols-[1fr_0.9fr]">
           <div className="space-y-4">
@@ -149,14 +149,33 @@ export default function OpenAccountPage() {
                 <p className="mt-2 text-sm font-medium text-ink">{step.title}</p>
               </div>
             ))}
-            <button className="mt-2 rounded-full bg-ink px-6 py-3 text-xs font-semibold uppercase tracking-[0.2em] text-ivory">
-              Open Demat Account
-            </button>
+            <a
+              href="#open-demat-top"
+              className="mt-2 inline-flex rounded-full bg-ink px-6 py-3 text-xs font-semibold uppercase tracking-[0.2em] text-ivory"
+            >
+              Get Started
+            </a>
+            <div className="mt-4 flex flex-wrap gap-3 text-xs text-ink/60">
+              <span className="rounded-full border border-ink/10 bg-ivory/60 px-3 py-1">
+                Stocks
+              </span>
+              <span className="rounded-full border border-ink/10 bg-ivory/60 px-3 py-1">
+                Mutual Funds
+              </span>
+              <span className="rounded-full border border-ink/10 bg-ivory/60 px-3 py-1">
+                AIF
+              </span>
+            </div>
           </div>
-          <ResponsiveAssetImage
-            asset={openDematAssets.steps}
-            className="w-full rounded-[32px] border border-ink/10 shadow-sm"
-          />
+          <div className="overflow-hidden rounded-[32px] border border-ink/10 bg-white shadow-sm">
+            <iframe
+              className="aspect-video w-full"
+              src="https://www.youtube.com/embed/A9Xq3FGjpZA"
+              title="How to open a Demat account"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowFullScreen
+            />
+          </div>
         </div>
       </SectionShell>
 
