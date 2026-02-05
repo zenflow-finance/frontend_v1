@@ -121,6 +121,14 @@ export default function OpenAccountPage() {
           <h2 className="text-center text-3xl font-semibold text-ink">
             What Do <span className="text-zen-saffron">We Offer?</span>
           </h2>
+          <div className="mt-6 flex justify-center">
+            <img
+              src="/open-demat/banner_what_do_we_offer_web.png"
+              alt="What we offer banner"
+              className="w-full max-w-5xl rounded-3xl border border-ink/10"
+              loading="lazy"
+            />
+          </div>
           <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {openDematOffers.map((item, index) => (
               <div
