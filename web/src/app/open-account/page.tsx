@@ -118,10 +118,7 @@ export default function OpenAccountPage() {
       {/* What we offer strip */}
       <section className="bg-white">
         <div className="container-base py-12">
-          <h2 className="text-center text-3xl font-semibold text-ink">
-            What Do <span className="text-zen-saffron">We Offer?</span>
-          </h2>
-          <div className="mt-6 flex justify-center">
+          <div className="flex justify-center">
             <img
               src="/open-demat/banner_what_do_we_offer_web.png"
               alt="What we offer banner"
@@ -129,23 +126,6 @@ export default function OpenAccountPage() {
               loading="lazy"
             />
           </div>
-          <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-            {openDematOffers.map((item, index) => (
-              <div
-                key={item}
-                className="flex items-center gap-3 rounded-2xl border border-ink/10 bg-ivory/60 px-4 py-3"
-              >
-                <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-zen-saffron/15 text-sm font-semibold text-zen-saffron">
-                  {String(index + 1).padStart(2, "0")}
-                </div>
-                <span className="text-sm font-medium text-ink">{item}</span>
-              </div>
-            ))}
-          </div>
-          <p className="mt-6 text-center text-xs text-ink/50">
-            Placeholder icons shown as numbered badges. Replace with custom
-            icons later.
-          </p>
         </div>
       </section>
 
