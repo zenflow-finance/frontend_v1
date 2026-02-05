@@ -85,8 +85,8 @@ export default function Hero() {
                     ₹
                   </span>
                   <div>
-                    <p className="text-sm font-semibold text-ink">SIP</p>
-                    <p className="text-xs text-ink/60">Steady growth</p>
+                    <p className="text-sm font-semibold text-ink">Rocket</p>
+                    <p className="text-xs text-ink/60">Trading terminal</p>
                   </div>
                 </div>
               </div>

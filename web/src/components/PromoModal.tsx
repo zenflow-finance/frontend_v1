@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 // We keep it lightweight and easy to swap with real creative assets.
 export default function PromoModal() {
   const [isOpen, setIsOpen] = useState(false);
+  const [isSubmitted, setIsSubmitted] = useState(false);
 
   useEffect(() => {
     setIsOpen(true);
@@ -42,18 +43,29 @@ export default function PromoModal() {
         </div>
 
         <div className="space-y-3 px-6 py-6">
-          <input
-            type="tel"
-            placeholder="Mobile No."
-            className="w-full rounded-xl border border-ink/10 px-4 py-3 text-sm"
-          />
-          <button className="w-full rounded-xl bg-ink px-4 py-3 text-sm font-semibold text-white">
-            Submit
-          </button>
-          <p className="text-[11px] text-ink/50">
-            By clicking submit, you agree to our Terms & Conditions and Privacy
-            Policy.
-          </p>
+          {isSubmitted ? (
+            <div className="rounded-2xl border border-zen-emerald/20 bg-zen-emerald/10 px-4 py-4 text-sm text-ink">
+              Thank you. Our team will contact you shortly.
+            </div>
+          ) : (
+            <>
+              <input
+                type="tel"
+                placeholder="Mobile No."
+                className="w-full rounded-xl border border-ink/10 px-4 py-3 text-sm"
+              />
+              <button
+                className="w-full rounded-xl bg-ink px-4 py-3 text-sm font-semibold text-white"
+                onClick={() => setIsSubmitted(true)}
+              >
+                Submit
+              </button>
+              <p className="text-[11px] text-ink/50">
+                By clicking submit, you agree to our Terms & Conditions and
+                Privacy Policy.
+              </p>
+            </>
+          )}
         </div>
       </div>
     </div>

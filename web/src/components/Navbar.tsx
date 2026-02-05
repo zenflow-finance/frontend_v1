@@ -65,7 +65,7 @@ export default function Navbar() {
         {/* Primary actions */}
         <div className="ml-auto flex items-center gap-3">
           <Link
-            href="/open-account"
+            href="/login"
             className="rounded-xl border border-zen-saffron px-4 py-2 text-xs font-semibold text-zen-saffron transition hover:bg-zen-saffron/10"
           >
             Login
