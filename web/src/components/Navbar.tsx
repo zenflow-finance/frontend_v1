@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
 
@@ -13,11 +15,17 @@ export default function Navbar() {
         <Link href="/" className="flex items-center gap-3">
           <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-white">
             <Image
-              src="/Zenflow-finance.png"
+              src="/zenflow-finance.png"
               alt="Zenflow Finance"
               width={48}
               height={48}
               className="h-12 w-12 object-contain"
+              title="Logo src: /zenflow-finance.png"
+              onError={() => {
+                console.warn(
+                  "Zenflow logo failed to load. Check /public/zenflow-finance.png."
+                );
+              }}
             />
           </div>
           <div className="leading-tight">
