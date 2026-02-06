@@ -316,9 +316,12 @@ export default function OpenAccountPage() {
               </div>
 
               <div className="mt-6 flex flex-wrap gap-3">
-                <button className="rounded-2xl bg-ink px-5 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-ivory">
+                <a
+                  href="/rocket"
+                  className="rounded-2xl bg-ink px-5 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-ivory"
+                >
                   Know More
-                </button>
+                </a>
                 <div className="flex items-center gap-3">
                   <div className="rounded-xl bg-black px-4 py-2 text-xs text-white">
                     Google Play
