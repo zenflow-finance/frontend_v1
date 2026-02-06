@@ -240,22 +240,59 @@ export default function OpenAccountPage() {
 
       {/* Rocket app section */}
       <SectionShell className="bg-ivory/60 py-14">
-        <SectionHeading
-          eyebrow="Rocket"
-          title="Our investing & trading platform Rocket app"
-          subtitle="Built for super traders and long-term investors."
-        />
-        <div className="mt-10 grid gap-8 lg:grid-cols-[0.9fr_1.1fr]">
-          <ResponsiveAssetImage
-            asset={openDematAssets.app}
-            className="w-full rounded-[32px] border border-ink/10"
-          />
-          <div className="grid gap-4 sm:grid-cols-2">
-            {rocketAppFeatures.map((feature) => (
-              <div key={feature} className="card border-ink/10">
-                <p className="text-sm font-medium text-ink">{feature}</p>
+        <div className="rounded-[36px] border border-ink/10 bg-white px-8 py-10 shadow-sm lg:px-10">
+          <div className="grid gap-8 lg:grid-cols-[1.2fr_0.8fr] lg:items-center">
+            <div>
+              <p className="text-xs font-semibold uppercase tracking-[0.3em] text-zen-saffron">
+                Rocket
+              </p>
+              <h3 className="mt-4 text-2xl font-semibold text-ink md:text-3xl">
+                Our investing & trading platform Rocket app
+              </h3>
+              <p className="mt-3 text-sm text-ink/60">
+                Designed for intelligent traders and long-term investors.
+              </p>
+
+              <div className="mt-6 grid gap-3 sm:grid-cols-2">
+                {rocketAppFeatures.map((feature) => (
+                  <div
+                    key={feature}
+                    className="flex items-center gap-3 rounded-2xl border border-ink/10 bg-ivory/70 px-4 py-3"
+                  >
+                    <span className="flex h-8 w-8 items-center justify-center rounded-full bg-zen-saffron/15 text-zen-saffron">
+                      ✓
+                    </span>
+                    <span className="text-sm text-ink/80">{feature}</span>
+                  </div>
+                ))}
               </div>
-            ))}
+
+              <div className="mt-6 flex flex-wrap gap-3">
+                <button className="rounded-2xl bg-ink px-5 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-ivory">
+                  Know More
+                </button>
+                <div className="flex items-center gap-3">
+                  <div className="rounded-xl bg-black px-4 py-2 text-xs text-white">
+                    Google Play
+                  </div>
+                  <div className="rounded-xl bg-black px-4 py-2 text-xs text-white">
+                    App Store
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="flex justify-center">
+              <div className="relative w-full max-w-xs rounded-[28px] border border-ink/10 bg-ivory/80 p-6">
+                <div className="mx-auto h-72 w-full rounded-[24px] border border-ink/10 bg-white shadow-sm" />
+                <div className="absolute left-1/2 top-8 -translate-x-1/2 rounded-2xl bg-zen-saffron/15 px-4 py-2 text-xs font-semibold text-zen-saffron">
+                  Rocket
+                </div>
+                <p className="mt-4 text-center text-xs text-ink/50">
+                  Phone mockup placeholder. Replace with app render.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </SectionShell>
