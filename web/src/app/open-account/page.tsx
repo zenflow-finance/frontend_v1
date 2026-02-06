@@ -144,7 +144,55 @@ export default function OpenAccountPage() {
                 className="flex items-center gap-4 rounded-2xl border border-ink/10 bg-white px-6 py-5 shadow-sm"
               >
                 <div className="flex h-12 w-12 items-center justify-center rounded-2xl border border-zen-saffron/40 bg-zen-saffron/10 text-zen-saffron">
-                  {step.step.replace("STEP ", "")}
+                  {step.step === "STEP 1" ? (
+                    <svg
+                      viewBox="0 0 24 24"
+                      className="h-6 w-6"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="1.6"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      aria-hidden="true"
+                    >
+                      <rect x="7" y="2.5" width="10" height="19" rx="2.2" />
+                      <circle cx="12" cy="18.5" r="0.7" />
+                    </svg>
+                  ) : null}
+                  {step.step === "STEP 2" ? (
+                    <svg
+                      viewBox="0 0 24 24"
+                      className="h-6 w-6"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="1.6"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      aria-hidden="true"
+                    >
+                      <path d="M3 10h18" />
+                      <path d="M5 10V7.5a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1V10" />
+                      <path d="M4 10v8.5a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1V10" />
+                      <path d="M8 14h8" />
+                    </svg>
+                  ) : null}
+                  {step.step === "STEP 3" ? (
+                    <svg
+                      viewBox="0 0 24 24"
+                      className="h-6 w-6"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="1.6"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      aria-hidden="true"
+                    >
+                      <rect x="4" y="3" width="16" height="18" rx="2" />
+                      <circle cx="9" cy="9" r="2" />
+                      <path d="M7 14h6" />
+                      <path d="m15.5 15.5 1.5 1.5 3-3" />
+                    </svg>
+                  ) : null}
                 </div>
                 <div>
                   <p className="text-xs font-semibold uppercase tracking-[0.25em] text-ink/60">
